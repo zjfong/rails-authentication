@@ -11,4 +11,12 @@ module SessionsHelper
   def logout
     @current_user = session[:user_id] = nil
   end
+
+  def logged_in?
+    if current_user
+      true
+    else
+      redirect_to login_path
+    end
+  end
 end
