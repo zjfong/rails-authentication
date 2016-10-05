@@ -1,0 +1,10 @@
+<%= @users.length %> users
+<p>
+<% @users.each do |users| %>
+<li>
+  <%= users.first_name %>
+  <%= users.last_name %> <br>
+  <%= users.email %>
+</li>
+<% end %>
+</p>
